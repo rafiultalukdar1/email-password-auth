@@ -4,14 +4,13 @@ import { NavLink } from 'react-router';
 const NavBar = () => {
 
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/login'>LogIn</NavLink></li>
-        <li><NavLink to='/register'>Registration</NavLink></li>
+        <li className='px-[3px] text-[17px] font-semibold'><NavLink to='/login'>LogIn</NavLink></li>
+        <li className='px-[3px] text-[17px] font-semibold'><NavLink to='/registration'>Registration</NavLink></li>
     </>
 
     return (
         <div className='bg-base-100 shadow-sm'>
-            <div className="navbar container">
+            <div className="navbar container flex justify-between items-center">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,15 +22,12 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="text-xl font-semibold cursor-pointer">Home</a>
+                    <NavLink className="text-xl font-bold cursor-pointer uppercase" to='/'>Home</NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {links}
                     </ul>
-                </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
                 </div>
             </div>
         </div>

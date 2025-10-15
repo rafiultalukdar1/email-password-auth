@@ -6,3 +6,8 @@
   margin: 0 auto;
   padding: 0 15px;
 }
+
+li a.active {
+  color: #fff;
+  background: #000;
+}
